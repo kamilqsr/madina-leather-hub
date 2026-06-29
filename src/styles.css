@@ -118,3 +118,20 @@
   height: 1px;
   background: linear-gradient(to right, transparent, currentColor, transparent);
 }
+
+@utility input-classical {
+  width: 100%;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.55rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--foreground);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input-classical:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px oklch(0.68 0.13 75 / 0.2);
+}
