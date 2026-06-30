@@ -183,11 +183,6 @@ function TableView({ config }: { config: TableConfig }) {
         />
       )}
 
-      {!isAdmin && (
-        <p className="mt-6 text-sm italic text-muted-foreground text-center">
-          You are viewing as staff. Only the shop administrator may add or edit entries.
-        </p>
-      )}
     </AppShell>
   );
 }
