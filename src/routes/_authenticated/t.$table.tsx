@@ -27,8 +27,8 @@ function TablePage() {
 
 function TableView({ config }: { config: TableConfig }) {
   const qc = useQueryClient();
-  const { role } = useAuth();
-  const isAdmin = role === "admin";
+  useAuth();
+  const isAdmin = true;
   const [editing, setEditing] = useState<Row | null>(null);
   const [creating, setCreating] = useState(false);
 
@@ -183,11 +183,6 @@ function TableView({ config }: { config: TableConfig }) {
         />
       )}
 
-      {!isAdmin && (
-        <p className="mt-6 text-sm italic text-muted-foreground text-center">
-          You are viewing as staff. Only the shop administrator may add or edit entries.
-        </p>
-      )}
     </AppShell>
   );
 }
